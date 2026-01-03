@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ticket Purchase Flow</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#8c25f4",
+              "background-light": "#f7f5f8",
+              "background-dark": "#191022",
+              "surface-dark": "#231530",
+              "accent-purple": "#a855f7",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "1.5rem", "xl": "2rem", "2xl": "2.5rem", "full": "9999px"},
+            boxShadow: {
+              "neon": "0 0 10px rgba(140, 37, 244, 0.5), 0 0 20px rgba(140, 37, 244, 0.3)",
+              "neon-strong": "0 0 15px rgba(140, 37, 244, 0.7), 0 0 30px rgba(140, 37, 244, 0.4)",
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white overflow-x-hidden selection:bg-primary selection:text-white">
+<div class="relative flex flex-col min-h-screen w-full max-w-md mx-auto shadow-2xl bg-background-light dark:bg-background-dark">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center justify-between p-4 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-2xl dark:text-white">close</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Acheter Billet</h1>
+<div class="w-10"></div> <!-- Spacer for visual balance -->
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-4 pb-32">
+<!-- Event Summary Card -->
+<div class="mt-2 mb-8 bg-white dark:bg-surface-dark rounded-xl p-3 shadow-sm border border-slate-100 dark:border-white/5">
+<div class="flex gap-4">
+<div class="w-24 h-24 shrink-0 rounded-lg bg-center bg-cover" data-alt="Excited crowd at a neon-lit concert party" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrXHu7cwB_8ihv3huRTif8rhLoe4khNJKehRRlTBkvQNp79CKF2C6TQRLoMta4cAvdQRgw9v3-QM2sv9FP_IQ39_KOKmE_wOhsYXtEJHoo0f0JO9R5hC8oamfLN9kH4XrvSThKe5_0o98z0W101HH5jY5cXTnQScfn4LOrqgVK4_8ShIztuVAFg5fUIA5bp3YP1V0tlrbh-tK2JbFrsGITYt1ajAD3MWr20NoorZjUmHPQB7fVG_TxXda7884Kp96zCfIWeOiJF1w");'>
+</div>
+<div class="flex flex-col justify-center gap-1.5 flex-1 min-w-0">
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Concert</span>
+<h2 class="text-base font-bold leading-tight truncate">GouminOff Party Vol. 3</h2>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-xs">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span>Sam, 14 Nov • 22:00</span>
+</div>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-xs truncate">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span class="truncate">Palais de la Culture</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Ticket Selection -->
+<section class="space-y-4">
+<h3 class="text-lg font-bold px-1">Sélectionner les billets</h3>
+<!-- Ticket Item: Pass Simple -->
+<div class="group relative flex items-center justify-between p-4 rounded-2xl bg-white dark:bg-surface-dark border border-transparent dark:border-white/5 hover:border-primary/30 transition-all duration-300">
+<div class="flex flex-col gap-1">
+<p class="text-base font-bold">Pass Simple</p>
+<p class="text-primary font-bold text-lg">5 000 FCFA</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Accès zone générale + 1 Boisson</p>
+</div>
+<div class="flex items-center gap-3 bg-slate-100 dark:bg-[#150a1b] rounded-full p-1.5">
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-white dark:bg-[#2a1b36] shadow-sm text-slate-900 dark:text-white disabled:opacity-50 hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg">remove</span>
+</button>
+<span class="w-4 text-center font-bold text-lg">1</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white shadow-neon hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+</div>
+<!-- Ticket Item: Pass VIP -->
+<div class="group relative flex items-center justify-between p-4 rounded-2xl bg-white dark:bg-surface-dark border border-transparent dark:border-white/5 hover:border-primary/30 transition-all duration-300">
+<div class="flex flex-col gap-1">
+<p class="text-base font-bold">Pass VIP</p>
+<p class="text-primary font-bold text-lg">15 000 FCFA</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Accès VIP + Buffet + 2 Boissons</p>
+</div>
+<div class="flex items-center gap-3 bg-slate-100 dark:bg-[#150a1b] rounded-full p-1.5">
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-white dark:bg-[#2a1b36] shadow-sm text-slate-900 dark:text-white hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg">remove</span>
+</button>
+<span class="w-4 text-center font-bold text-lg text-slate-500 dark:text-slate-500">0</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-white dark:bg-[#2a1b36] text-slate-900 dark:text-white hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+</div>
+<!-- Ticket Item: Table Pack -->
+<div class="group relative flex items-center justify-between p-4 rounded-2xl bg-white dark:bg-surface-dark border border-transparent dark:border-white/5 hover:border-primary/30 transition-all duration-300">
+<div class="flex flex-col gap-1">
+<p class="text-base font-bold">Table (5 pers)</p>
+<p class="text-primary font-bold text-lg">100 000 FCFA</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Salon privé + Bouteille Premium</p>
+</div>
+<div class="flex items-center gap-3 bg-slate-100 dark:bg-[#150a1b] rounded-full p-1.5">
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-white dark:bg-[#2a1b36] shadow-sm text-slate-900 dark:text-white hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg">remove</span>
+</button>
+<span class="w-4 text-center font-bold text-lg text-slate-500 dark:text-slate-500">0</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-white dark:bg-[#2a1b36] text-slate-900 dark:text-white hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Order Summary -->
+<section class="mt-8 px-2 space-y-3 border-t border-slate-200 dark:border-white/10 pt-6">
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-600 dark:text-slate-400">Sous-total</span>
+<span class="font-medium">5 000 FCFA</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-600 dark:text-slate-400 flex items-center gap-1">
+                        Frais de service
+                        <span class="material-symbols-outlined text-[14px] text-slate-400">info</span>
+</span>
+<span class="font-medium">200 FCFA</span>
+</div>
+</section>
+</main>
+<!-- Fixed Bottom Action Bar -->
+<div class="fixed bottom-0 left-0 w-full z-40">
+<!-- Gradient fade above footer -->
+<div class="h-12 w-full bg-gradient-to-t from-background-light via-background-light to-transparent dark:from-background-dark dark:via-background-dark dark:to-transparent pointer-events-none"></div>
+<div class="bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-white/10 p-5 pb-8 max-w-md mx-auto">
+<div class="flex items-center justify-between mb-4">
+<div class="flex flex-col">
+<span class="text-xs text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider">Total à payer</span>
+<span class="text-2xl font-extrabold text-slate-900 dark:text-white">5 200 <span class="text-sm font-bold text-primary">FCFA</span></span>
+</div>
+</div>
+<button class="w-full relative group overflow-hidden rounded-full p-[1px]">
+<span class="absolute inset-0 bg-gradient-to-r from-primary to-accent-purple opacity-100 transition-opacity"></span>
+<div class="relative flex items-center justify-center gap-2 w-full h-14 bg-primary rounded-full group-hover:bg-opacity-90 transition-all duration-200 shadow-neon-strong">
+<span class="text-white font-bold text-lg tracking-wide">Payer maintenant</span>
+<span class="material-symbols-outlined text-white">arrow_forward</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+</body></html>

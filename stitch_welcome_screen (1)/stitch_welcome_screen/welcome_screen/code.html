@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wézon - Welcome</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&amp;family=Noto+Sans:wght@400..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8c25f4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#191022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom glow effect for the hero section */
+        .neon-glow {
+            box-shadow: 0 0 40px -10px rgba(140, 37, 244, 0.4);
+        }
+        .bg-gradient-radial {
+            background-image: radial-gradient(circle at center, var(--tw-gradient-stops));
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased selection:bg-primary selection:text-white overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col justify-between overflow-hidden">
+<!-- Background Ambient Glow -->
+<div class="absolute top-[-10%] left-[-10%] w-[50%] h-[40%] rounded-full bg-primary/20 blur-[100px] pointer-events-none"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[40%] rounded-full bg-primary/10 blur-[100px] pointer-events-none"></div>
+<!-- Main Content Wrapper -->
+<div class="flex flex-col flex-1 px-6 pt-12 pb-6 z-10">
+<!-- Logo Section -->
+<div class="flex flex-col items-center justify-center pb-8">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary !text-[32px]">local_activity</span>
+<h1 class="text-slate-900 dark:text-white tracking-tight text-[32px] font-extrabold leading-tight">Wézon</h1>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium tracking-wide uppercase">Own Your City's Vibe</p>
+</div>
+<!-- Hero Image Section -->
+<div class="flex-1 flex items-center justify-center py-4">
+<div class="relative w-full max-w-sm aspect-[4/5] rounded-2xl overflow-hidden neon-glow group">
+<!-- Image -->
+<div class="absolute inset-0 w-full h-full bg-center bg-cover transition-transform duration-700 group-hover:scale-105" data-alt="Excited diverse crowd dancing at a neon-lit urban night event" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBcFT3ScvrITlLRVTjjDjQ6pRleqZMYC9XWBxkCWCLdaDEm21G9-qUgNzwRAqaPdOxLBj9zVxQFvYlTQYNKiDd3L8TMAP60bM72G7ThXOEiJ73pQNYT9KZOnCayyy76XvopvxFClkQWJghdTcWaUMBGy_TFEGm1Q9XBpVbMwRB6fOJRDhaTSDjs0zwDwFhHkFI6ZUtdPLkefmsBiYQKI6x6bl019gtkBLlXwOUpYLBry1AoSj6GSReDtPQ9aIpxT5sNt2xaz8zZ7rE");'>
+</div>
+<!-- Gradient Overlay for better text readability if needed, though text is below -->
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent"></div>
+<!-- Floating Badge -->
+<div class="absolute top-4 right-4 bg-primary/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg border border-white/10">
+                        #GouminOff
+                    </div>
+</div>
+</div>
+<!-- Text Content -->
+<div class="flex flex-col items-center gap-2 pt-6 text-center">
+<h2 class="text-slate-900 dark:text-white tracking-tight text-[32px] font-bold leading-tight">
+                    No More <span class="text-primary">Goumin.</span>
+</h2>
+<p class="text-slate-600 dark:text-slate-300 text-base font-normal leading-relaxed max-w-[320px]">
+                    Find the hottest cultural, festive, and artistic events near you.
+                </p>
+</div>
+</div>
+<!-- Bottom Actions -->
+<div class="w-full px-6 pb-8 pt-2 z-10 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent">
+<div class="flex flex-col gap-4 items-center">
+<!-- Primary Button -->
+<button class="relative w-full max-w-[480px] h-14 cursor-pointer overflow-hidden rounded-xl bg-primary hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25 group">
+<div class="absolute inset-0 flex items-center justify-center gap-2 text-white text-lg font-bold leading-normal tracking-wide">
+<span>Start Exploring</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</button>
+<!-- Secondary Link -->
+<button class="text-slate-500 dark:text-slate-400 text-sm font-medium hover:text-primary dark:hover:text-white transition-colors">
+                    Already have an account? <span class="text-primary dark:text-primary font-bold">Log In</span>
+</button>
+</div>
+<!-- Safe Area Spacer for iOS Home Indicator -->
+<div class="h-2"></div>
+</div>
+</div>
+</body></html>

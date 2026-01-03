@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payment Confirmation</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8c25f4",
+                        "primary-dark": "#701bc4",
+                        "accent": "#ad90cb",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#191022",
+                        "surface-dark": "#261834",
+                        "surface-darker": "#1a1023",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "1.5rem", "xl": "2rem", "2xl": "2.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col overflow-x-hidden selection:bg-primary selection:text-white">
+<!-- Top Navigation -->
+<div class="flex items-center p-4 justify-between sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md">
+<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-center cursor-pointer hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Confirmation</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="text-primary dark:text-[#ad90cb] text-base font-bold leading-normal tracking-[0.015em] shrink-0 hover:text-primary-dark dark:hover:text-white transition-colors">Help</button>
+</div>
+</div>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col items-center px-4 pt-2 pb-8 w-full max-w-md mx-auto">
+<!-- Hero Section: Success Indicator -->
+<div class="flex flex-col items-center gap-6 w-full animate-fade-in-up">
+<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group">
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent z-10 opacity-60"></div>
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="Crowd dancing at a neon-lit rave concert" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAf4L2YS-v96wIHNyMEpapuDHhj2wMRn42KmMftPFLHAmY6t9PWV6ey-YA-lkd_M2yvemIXDxiZCOcZtPTdw_wTjsjqA4IXH1R1userwVMMCchYOUi2QvQciS3-fBlEpAP0uYKNKwtJ0AKPNJLFpOoo_-wu6Sld4qP1uMBMByC7a9jtE0gHYqOA22u0_g5ifca_w0RyfJZvaTzLmZut5P9R0AtDTo_CTWW4r-lLuxygou7Q1EhbODkn0tHiMvVKYKzvVSkMR9ndyv4");'>
+</div>
+<!-- Floating Success Badge -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center justify-center">
+<div class="bg-primary/20 backdrop-blur-sm p-4 rounded-full mb-4 ring-4 ring-primary/40 animate-pulse">
+<div class="bg-primary text-white p-4 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(140,37,244,0.6)]">
+<span class="material-symbols-outlined text-4xl">check</span>
+</div>
+</div>
+</div>
+<!-- Confetti decoration (Static CSS representation) -->
+<div class="absolute inset-0 pointer-events-none z-0 opacity-40 mix-blend-screen" style="background-image: radial-gradient(circle, #8c25f4 2px, transparent 2.5px); background-size: 24px 24px;"></div>
+</div>
+<div class="flex flex-col items-center gap-2 text-center w-full">
+<h1 class="text-3xl font-extrabold leading-tight tracking-tight text-slate-900 dark:text-white drop-shadow-sm">
+                    You're In!
+                </h1>
+<p class="text-slate-600 dark:text-gray-300 text-sm font-medium leading-relaxed max-w-[280px]">
+                    Your order <span class="text-primary font-bold">#49201</span> has been confirmed. Get ready for the night of your life.
+                </p>
+</div>
+</div>
+<!-- Ticket Card -->
+<div class="w-full mt-8 relative">
+<!-- Decorative Glow behind card -->
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-2xl blur opacity-20 dark:opacity-40"></div>
+<div class="relative flex flex-col gap-0 rounded-2xl bg-white dark:bg-surface-dark shadow-xl overflow-hidden border border-slate-200 dark:border-white/5">
+<!-- Ticket Header (Perforated look bottom) -->
+<div class="p-5 pb-6 border-b-2 border-dashed border-slate-200 dark:border-white/10 relative">
+<!-- Semi-circles for ticket cutout effect -->
+<div class="absolute -bottom-3 -left-3 w-6 h-6 rounded-full bg-background-light dark:bg-background-dark"></div>
+<div class="absolute -bottom-3 -right-3 w-6 h-6 rounded-full bg-background-light dark:bg-background-dark"></div>
+<div class="flex justify-between items-start mb-4">
+<div class="flex flex-col gap-1">
+<span class="inline-flex items-center justify-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-primary/10 text-primary dark:bg-primary/20 dark:text-purple-200 w-fit">
+                                CONFIRMED
+                            </span>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">Neon Jungle: GouminOff</h3>
+</div>
+<div class="size-10 rounded-lg bg-slate-100 dark:bg-white/5 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-slate-900 dark:text-white">local_activity</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-1">
+<p class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-[#ad90cb]">Date &amp; Time</p>
+<div class="flex items-center gap-1.5 text-slate-900 dark:text-white text-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span>Sat, Nov 14 • 10 PM</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-[#ad90cb]">Admit</p>
+<div class="flex items-center gap-1.5 text-slate-900 dark:text-white text-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">group</span>
+<span>2x General</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Ticket Body (Map & Details) -->
+<div class="p-5 pt-6 bg-slate-50 dark:bg-[#2d1e3d]/50">
+<div class="flex items-center gap-4">
+<div class="flex-1 flex flex-col gap-1">
+<p class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-[#ad90cb]">Location</p>
+<p class="text-sm font-bold text-slate-900 dark:text-white leading-tight">The Warehouse, Downtown Area</p>
+<button class="mt-2 text-primary text-xs font-bold flex items-center gap-1 hover:underline">
+<span class="material-symbols-outlined text-[16px]">map</span>
+                                Get Directions
+                            </button>
+</div>
+<div class="w-20 h-20 rounded-xl bg-slate-200 dark:bg-white/10 overflow-hidden relative shrink-0 border border-white/10">
+<div class="w-full h-full bg-cover bg-center" data-alt="Map view showing location pin in city center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCU7nflncDoV8Va1veNE5zL9kL4JwbCL92pgKS7TxDi1hq6UZ6qWiish7rRrNasX-O_X4UBDYCtftFnaZ8E2-uqLTj-X7lvSiCCPoyUO3YHKdJP4HQdOn_gFYX8SHWZkouVZk8wnkd3_-uz0REdwD2-jdLggDokiYG1FaU3OO0n4cyHvNg5zG2YGIAAt2V7N_xQa7XMP4rJDnSaUIDi7DSpD_4zB4_PUjZqi6RafXXAT0vkmT9i8BxZ4qbfmgZJ48ubOZsSR7w5wSw");'></div>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white drop-shadow-md">location_on</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="w-full flex flex-col gap-3 mt-8">
+<button class="relative w-full overflow-hidden rounded-full h-14 bg-primary text-white flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(140,37,244,0.4)] hover:bg-primary-dark transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined">qr_code_2</span>
+<span class="text-base font-bold tracking-wide">View E-Tickets</span>
+<!-- Shiny effect overlay -->
+<div class="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+</button>
+<button class="w-full rounded-full h-12 bg-transparent border border-slate-200 dark:border-white/20 text-slate-900 dark:text-white flex items-center justify-center gap-2 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors font-semibold text-sm">
+<span class="material-symbols-outlined text-[20px]">ios_share</span>
+                Share Event
+            </button>
+</div>
+</main>
+<style>
+        @keyframes shimmer {
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</body></html>

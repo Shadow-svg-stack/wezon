@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="dark"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Event Details</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8c25f4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#191022",
+                        "surface-dark": "#261834",
+                        "surface-border": "#4d3168",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for horizontal scroll */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white pb-32">
+<!-- Top Navigation (Absolute) -->
+<div class="fixed top-0 left-0 w-full z-20 p-4 pt-12 flex justify-between items-center bg-gradient-to-b from-black/60 to-transparent">
+<button class="flex items-center justify-center w-10 h-10 rounded-full bg-black/20 backdrop-blur-md border border-white/10 text-white transition-transform active:scale-95">
+<span class="material-symbols-outlined text-white" style="font-size: 24px;">arrow_back</span>
+</button>
+<div class="flex gap-3">
+<button class="flex items-center justify-center w-10 h-10 rounded-full bg-black/20 backdrop-blur-md border border-white/10 text-white transition-transform active:scale-95">
+<span class="material-symbols-outlined text-white" style="font-size: 24px;">favorite_border</span>
+</button>
+<button class="flex items-center justify-center w-10 h-10 rounded-full bg-black/20 backdrop-blur-md border border-white/10 text-white transition-transform active:scale-95">
+<span class="material-symbols-outlined text-white" style="font-size: 24px;">share</span>
+</button>
+</div>
+</div>
+<!-- Hero Image Section -->
+<div class="relative w-full h-[55vh] min-h-[450px]">
+<div class="absolute inset-0 bg-cover bg-center bg-no-repeat" data-alt="Exciting concert crowd with purple stage lights and smoke" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuClFK3ItEoX1FxvBpAHjOf4eGM9lRfwPPuR_s9X3M89IEs6H0UlaUwUmeL75JRdztXYxdzByp1hXTGBfGjgjCIr6VKFLJd8VhL_TSacZSymVo3N6ATnGgRUvdcWf_7CxXDm0cjhunXXb11YYId7UYRzOhHg6L083VZ86ZyjXbC9xO-3jn9GvjcuqPzIJfIPCfHFBccl7GlcV_kWadAGG1o1Ku-MavPKj1VduKxIVEyqAxlpYP6E2BS7NjGCuzXO44zcautpTsOyqPM');">
+</div>
+<!-- Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#191022] via-[#191022]/60 to-transparent"></div>
+<!-- Floating Title Content -->
+<div class="absolute bottom-0 w-full p-4 flex flex-col gap-2">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider bg-[#d2ff00] text-black shadow-[0_0_10px_rgba(210,255,0,0.4)]">
+                    GouminOff Pick
+                </span>
+<div class="flex items-center gap-1 px-2 py-1 rounded-full bg-primary/30 border border-primary/40 backdrop-blur-sm">
+<span class="material-symbols-outlined text-primary text-[14px]">local_fire_department</span>
+<span class="text-xs font-semibold text-primary">Trending</span>
+</div>
+</div>
+<h1 class="text-white text-3xl md:text-4xl font-extrabold leading-tight tracking-tight drop-shadow-lg">
+                GouminOff Fest:<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-primary/80">Abidjan Vibes</span>
+</h1>
+</div>
+</div>
+<!-- Categories / Chips -->
+<div class="px-4 py-2 flex flex-wrap gap-2">
+<div class="flex items-center justify-center px-4 py-1.5 rounded-full bg-surface-dark border border-surface-border">
+<span class="text-white/90 text-sm font-medium">Concert</span>
+</div>
+<div class="flex items-center justify-center px-4 py-1.5 rounded-full bg-surface-dark border border-surface-border">
+<span class="text-white/90 text-sm font-medium">Hip-Hop</span>
+</div>
+<div class="flex items-center justify-center px-4 py-1.5 rounded-full bg-surface-dark border border-surface-border">
+<span class="text-white/90 text-sm font-medium">Urban Culture</span>
+</div>
+</div>
+<!-- Info Grid -->
+<div class="px-4 py-6">
+<div class="grid grid-cols-2 gap-3">
+<div class="flex flex-col gap-1 rounded-xl bg-surface-dark border border-surface-border p-4 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-16 h-16 bg-primary/10 rounded-full -mr-6 -mt-6 blur-xl group-hover:bg-primary/20 transition-all"></div>
+<div class="text-primary mb-1">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<p class="text-xs text-white/60 font-medium uppercase tracking-wide">Date</p>
+<p class="text-white text-base font-bold">SAM 24 OCT</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl bg-surface-dark border border-surface-border p-4 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-16 h-16 bg-primary/10 rounded-full -mr-6 -mt-6 blur-xl group-hover:bg-primary/20 transition-all"></div>
+<div class="text-primary mb-1">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<p class="text-xs text-white/60 font-medium uppercase tracking-wide">Time</p>
+<p class="text-white text-base font-bold">22H00</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl bg-surface-dark border border-surface-border p-4 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-16 h-16 bg-primary/10 rounded-full -mr-6 -mt-6 blur-xl group-hover:bg-primary/20 transition-all"></div>
+<div class="text-primary mb-1">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<p class="text-xs text-white/60 font-medium uppercase tracking-wide">Lieu</p>
+<p class="text-white text-base font-bold truncate">Ivoire Golf Club</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl bg-surface-dark border border-surface-border p-4 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-16 h-16 bg-primary/10 rounded-full -mr-6 -mt-6 blur-xl group-hover:bg-primary/20 transition-all"></div>
+<div class="text-primary mb-1">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<p class="text-xs text-white/60 font-medium uppercase tracking-wide">Prix</p>
+<p class="text-white text-base font-bold">10.000 FCFA</p>
+</div>
+</div>
+</div>
+<!-- Artist Lineup -->
+<div class="py-4">
+<div class="px-4 mb-3 flex justify-between items-center">
+<h2 class="text-lg font-bold text-white">Artistes Invités</h2>
+<button class="text-xs text-primary font-bold uppercase tracking-wider">Voir tout</button>
+</div>
+<div class="flex overflow-x-auto gap-5 px-4 pb-4 no-scrollbar snap-x">
+<!-- Artist 1 -->
+<div class="flex flex-col items-center gap-2 flex-shrink-0 snap-center">
+<div class="w-20 h-20 rounded-full p-0.5 bg-gradient-to-tr from-primary to-[#d2ff00]">
+<div class="w-full h-full rounded-full border-2 border-background-dark overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="Close up portrait of male rapper with sunglasses" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAiEvIetx_2jsQ3i21SUew-iIUpyoqA01d5aNH65wYTj4GzXx5-crrWEWn5u64KuW_1DG0bFboFtA8fxAX1i4uVzlyAoJ82zuFfzCoTKloDMMGaMpKSZi9EybBRkjWRh9qcxU3g8JUQz2dbP2PYm0UWwcSgPryzaMjjofjWtoLBdFHJiNITsIFNdWiMhz-T-CAefPpZ-zQ6R1WIdDByL8Yq-tJqGAzdOv7_LO3J7Oq6hIHCj4mtiwi0czixW1M-T87Mp7KCy6OaeLk');"></div>
+</div>
+</div>
+<p class="text-sm font-semibold text-white">Didi B</p>
+</div>
+<!-- Artist 2 -->
+<div class="flex flex-col items-center gap-2 flex-shrink-0 snap-center">
+<div class="w-20 h-20 rounded-full p-0.5 bg-gradient-to-tr from-primary to-transparent">
+<div class="w-full h-full rounded-full border-2 border-background-dark overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="Portrait of female singer looking confident" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAuTm5pQe_LKMKJsV0DH8PhwYWolYX0QHCxjixypdYaI1E3n1gRy5jF3xmFpFj5dkPskYquZGqkIZv9qdpAcYvF8VsrfzNNN3fPJdUC0QSOzm57_X14MyiUFJm7QbVMq5kWQbdbJ5TjsAbDRTFnvvDYqJds7u-dSscRKYjrx8lHm23sVU6y7sI8jGZsZ4xka1DhpB0ncWTxYvvzutRBnA24guzGw4hBg-cacene83JGFbyAdVSFUM2s82z02AFvnv4ZNkjvtQGVAV4');"></div>
+</div>
+</div>
+<p class="text-sm font-semibold text-white">Roseline</p>
+</div>
+<!-- Artist 3 -->
+<div class="flex flex-col items-center gap-2 flex-shrink-0 snap-center">
+<div class="w-20 h-20 rounded-full p-0.5 bg-gradient-to-tr from-primary to-transparent">
+<div class="w-full h-full rounded-full border-2 border-background-dark overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="Portrait of male artist with cap" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKpN94Nnk02FGR-2n9FZqPC7yIs5zB7BYvTM_BHX3pGhFrM0L5IXwAcoufkplXcVgYf1wqba2SE4FMIiMaPho-O8eDvaD719vyjkoJhzKTFVrbsVQTmkN_WkXODMzAMR6-EKYdpDq3zLNjt7pz0Ls9R6KTbwvESAmt-4IFKbcyzEdkJU5dYGxJx1rkbjUIILprGeY-f1EKan9AimwQqhISPNVHqyQztb8aFS5CcBrDQcxQU9TwMhjU0Lvom6SGhO3Qgj2yXibudr4');"></div>
+</div>
+</div>
+<p class="text-sm font-semibold text-white">Suspect 95</p>
+</div>
+<!-- Artist 4 -->
+<div class="flex flex-col items-center gap-2 flex-shrink-0 snap-center">
+<div class="w-20 h-20 rounded-full p-0.5 bg-gradient-to-tr from-primary to-transparent">
+<div class="w-full h-full rounded-full border-2 border-background-dark overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="Portrait of male artist smiling" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyl3OX9dSV9JJ0dsB0LjnGxtvsF7lblxKK3MDZnJAO7307fF3WE2yjDTvjkXLLmOLE8l-69ukkPGdY_ETZtby2GCIY4u8GGTwK4dnSqnD6_3RJ-vR0R5Y1A__L6d70XEj3vPUyRtnx64WXkVviJvUrz9YPkIBQSICrXB6FhPDaERaGgW-Ay-OuxV7Kf-QU79qQDL-6SfCgX8UEmvwFRV3iYQOOAfh_dyttTfNVR_Cxm7a0V_ppEZJnE2dETvgz1AKhw5fSVVF9Oyg');"></div>
+</div>
+</div>
+<p class="text-sm font-semibold text-white">Black K</p>
+</div>
+</div>
+</div>
+<!-- Description -->
+<div class="px-4 py-2">
+<h3 class="text-lg font-bold text-white mb-2">À propos</h3>
+<div class="relative">
+<p class="text-white/70 text-base leading-relaxed line-clamp-3">
+                Le plus grand festival de musique urbaine débarque à Abidjan ! Préparez-vous pour une nuit inoubliable avec les meilleures vibes du pays. Au programme : des performances lives exclusives, des DJ sets enflammés et une ambiance 100% GouminOff. Ne manquez pas ça !
+            </p>
+<button class="mt-1 text-primary text-sm font-bold underline decoration-2 underline-offset-4">Lire plus</button>
+</div>
+</div>
+<!-- Map Preview -->
+<div class="px-4 py-6">
+<h3 class="text-lg font-bold text-white mb-3">Localisation</h3>
+<div class="w-full h-40 rounded-xl overflow-hidden relative border border-surface-border">
+<div class="w-full h-full bg-cover bg-center opacity-80" data-alt="Dark map view of Abidjan streets" data-location="Abidjan" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCNBva-2sqEwq3dBQKJN9JQ2Z3Cd3mXBgm2zYV_Yix6S1M-SY7AYySPz55O2ttPiZK7aiILUMgZyOdWieBaEy_7lQcqzXvi8HnAWkVYUns69n35CE4fOkQCKAiRIORbOAQz7YPC3W4dGrJYrZGFP7fhuGTWk1y1GuFHbBTgpgfaXDYKgbV43iCGhK_c5FzYKZkAMiT2_re6SZokNqDTk_Ley6JOxi-Lygh3FE3e9a1bm_VBD45Ky7RdIlQbFl8ar6uukIkF6Qdw6tQ');">
+</div>
+<!-- Map Marker Overlay -->
+<div class="absolute inset-0 flex items-center justify-center bg-black/20">
+<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(140,37,244,0.6)] animate-bounce">
+<span class="material-symbols-outlined text-white">location_on</span>
+</div>
+</div>
+<!-- Address Tag -->
+<div class="absolute bottom-3 left-3 bg-background-dark/90 backdrop-blur px-3 py-1.5 rounded-lg border border-white/10">
+<p class="text-xs text-white font-medium">Ivoire Golf Club, Cocody</p>
+</div>
+</div>
+</div>
+<!-- Sticky Footer Action Bar -->
+<div class="fixed bottom-0 left-0 w-full z-50">
+<!-- Gradient fade for smooth transition -->
+<div class="h-8 w-full bg-gradient-to-t from-background-dark to-transparent absolute -top-8 pointer-events-none"></div>
+<div class="bg-background-dark/80 backdrop-blur-xl border-t border-white/5 px-4 py-4 pb-8 md:pb-6 flex gap-3 items-center shadow-2xl">
+<!-- Share/Action Circle Button -->
+<button class="flex flex-col items-center justify-center gap-1 w-[60px] h-12 rounded-xl bg-surface-dark border border-surface-border active:bg-surface-border transition-colors">
+<span class="material-symbols-outlined text-white text-[20px]">share</span>
+<span class="text-[10px] text-white/60 font-medium">Partager</span>
+</button>
+<!-- I'm Coming Button -->
+<button class="flex flex-col items-center justify-center gap-1 w-[60px] h-12 rounded-xl bg-surface-dark border border-surface-border active:bg-surface-border transition-colors">
+<span class="material-symbols-outlined text-[#d2ff00] text-[20px]">check_circle</span>
+<span class="text-[10px] text-white/60 font-medium">Je viens</span>
+</button>
+<!-- Buy Button -->
+<button class="flex-1 h-12 bg-primary hover:bg-primary/90 rounded-xl flex items-center justify-between px-6 shadow-[0_0_20px_rgba(140,37,244,0.4)] transition-all active:scale-[0.98]">
+<span class="text-white font-bold text-base tracking-wide uppercase">Acheter Billet</span>
+<span class="bg-white/20 px-2 py-0.5 rounded text-white text-xs font-bold">10k</span>
+</button>
+</div>
+</div>
+</body></html>

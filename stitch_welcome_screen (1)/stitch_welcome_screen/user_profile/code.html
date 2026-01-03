@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Profile - Urban Discovery App</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#8c25f4",
+              "background-light": "#f7f5f8",
+              "background-dark": "#121212", 
+              "surface-dark": "#1E1E1E",
+              "surface-light": "#ffffff",
+              "text-secondary": "#ad90cb",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            boxShadow: {
+                "neon": "0 0 10px rgba(140, 37, 244, 0.5), 0 0 20px rgba(140, 37, 244, 0.3)"
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto shadow-2xl bg-background-light dark:bg-background-dark pb-24">
+<!-- TopAppBar -->
+<div class="sticky top-0 z-50 flex items-center bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md p-4 pb-2 justify-between border-b border-gray-200 dark:border-white/5">
+<h2 class="text-gray-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] flex-1">My Profile</h2>
+<div class="flex items-center justify-end gap-2">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-gray-500 dark:text-[#ad90cb]" style="font-size: 24px;">settings</span>
+</button>
+</div>
+</div>
+<!-- ProfileHeader -->
+<div class="flex p-4 @container pt-6">
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="flex gap-4 flex-col items-center relative">
+<!-- Avatar with Neon Ring -->
+<div class="p-1 rounded-full border-2 border-primary shadow-[0_0_15px_rgba(140,37,244,0.4)]">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-28 w-28" data-alt="Stylized portrait of a young urban male with dreadlocks and sunglasses" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDjpZzsiAThIhQ2921AKjnkFdYnr5fcN_CDXc5a6wYVqHjCGPpZlJ7bcdctL63TIeQlWDwE0xSLlYJBBKcwkqNmEN6Sj3tn1iu9Q8OqUK2XblijRog_gPjoD5kwWpn5yM7BObhxMqv2Q1FyQYJVR4nFuZdDMPdacpHQb8KbfHVRy6TO3qRpqIcH99CG3t1fvnZYVmJvruHfc-Tjeedk37EeYPxUR3EAh8bR3PDGhYeA3sUpyaiFyBvcgoHkFOtGJy6c9vMV7_QHGn4");'></div>
+</div>
+<!-- Edit Button Absolute -->
+<button class="absolute bottom-[88px] right-0 bg-surface-dark border border-gray-700 rounded-full p-2 text-primary shadow-lg hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" style="font-size: 18px;">edit</span>
+</button>
+<div class="flex flex-col items-center justify-center">
+<div class="flex items-center gap-2">
+<p class="text-gray-900 dark:text-white text-[24px] font-extrabold leading-tight tracking-[-0.015em] text-center">Djibril K.</p>
+<span class="material-symbols-outlined text-blue-500" style="font-size: 20px; font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="text-gray-500 dark:text-[#ad90cb] text-base font-medium leading-normal text-center mt-1">@djib_vibes • Abidjan</p>
+<!-- Rank Badge -->
+<div class="mt-3 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-sm">local_fire_department</span>
+<p class="text-primary text-xs font-bold uppercase tracking-wider">Party Starter Rank</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats -->
+<div class="flex flex-wrap gap-3 px-4 py-2">
+<div class="flex flex-1 flex-col gap-1 rounded-xl p-4 bg-white dark:bg-surface-dark border border-gray-100 dark:border-white/5 shadow-sm">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-lg">event</span>
+<p class="text-gray-500 dark:text-[#ad90cb] text-xs font-bold uppercase tracking-wider">Events</p>
+</div>
+<p class="text-gray-900 dark:text-white tracking-tight text-2xl font-bold leading-tight">12</p>
+</div>
+<div class="flex flex-1 flex-col gap-1 rounded-xl p-4 bg-white dark:bg-surface-dark border border-gray-100 dark:border-white/5 shadow-sm">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-lg">favorite</span>
+<p class="text-gray-500 dark:text-[#ad90cb] text-xs font-bold uppercase tracking-wider">Saved</p>
+</div>
+<p class="text-gray-900 dark:text-white tracking-tight text-2xl font-bold leading-tight">5</p>
+</div>
+<div class="flex flex-1 flex-col gap-1 rounded-xl p-4 bg-white dark:bg-surface-dark border border-gray-100 dark:border-white/5 shadow-sm relative overflow-hidden group">
+<!-- Background accent for Points -->
+<div class="absolute -right-4 -top-4 w-16 h-16 bg-primary/20 rounded-full blur-xl group-hover:bg-primary/30 transition-colors"></div>
+<div class="flex items-center gap-2 mb-1 relative z-10">
+<span class="material-symbols-outlined text-primary text-lg">stars</span>
+<p class="text-gray-500 dark:text-[#ad90cb] text-xs font-bold uppercase tracking-wider">Points</p>
+</div>
+<p class="text-gray-900 dark:text-white tracking-tight text-2xl font-bold leading-tight relative z-10">340</p>
+</div>
+</div>
+<!-- Tabs -->
+<div class="pt-4 sticky top-[60px] bg-background-light dark:bg-background-dark z-40 pb-2">
+<div class="flex border-b border-gray-200 dark:border-white/10 px-4 justify-between gap-6">
+<button class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-gray-900 dark:text-white pb-3 pt-2 flex-1 transition-all">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">My Stash</p>
+</button>
+<button class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 pb-3 pt-2 flex-1 transition-all">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">History</p>
+</button>
+<button class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 pb-3 pt-2 flex-1 transition-all">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Settings</p>
+</button>
+</div>
+</div>
+<!-- Content Area: Stash List -->
+<div class="flex flex-col gap-4 p-4 min-h-[300px]">
+<!-- Card 1 -->
+<div class="group relative flex flex-col sm:flex-row items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-surface-dark p-3 border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-md dark:hover:shadow-neon transition-all duration-300">
+<div class="w-full sm:w-32 h-32 sm:h-auto bg-center bg-no-repeat bg-cover rounded-lg shrink-0 relative overflow-hidden" data-alt="Neon lit art gallery entrance at night" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBXti0fn7tNjFVQH4GtOjnMqgYeC-_YeE9x3cCwFnc1wRlkTytyUxscPyto2tEkThhfTs1y3KBHrE-jF4VS7RtCnjiEIeEm6fRINffg_HacMzEc98oZN4E127RejE696sU0fU03zBQ9G7rE2K-aopVNUlQVFfnNrZ8LU_timl5-lDuiDK1_Agl-YTpL58Z7wcBC-_UDK_KsEYRU0KqWc9Uf7hkGMH3u2Koof1pNvJ6TXkoTkg9ZNFC7GSV1fZm_LUczQhxrfZJ63OI");'>
+<div class="absolute top-2 left-2 bg-black/60 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-bold text-white uppercase tracking-wide">
+                        Art
+                    </div>
+</div>
+<div class="flex flex-col justify-between flex-1 gap-2">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<p class="text-gray-900 dark:text-white text-lg font-bold leading-tight line-clamp-1">Neon Art Expo</p>
+<button class="text-gray-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 20px;">bookmark_remove</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined" style="font-size: 16px;">calendar_month</span>
+<p class="text-sm font-semibold leading-normal">Fri, 24 Nov • 20:00</p>
+</div>
+<div class="flex items-center gap-1.5 text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+<p class="text-sm font-normal leading-normal line-clamp-1">Gallery 23, Zone 4</p>
+</div>
+</div>
+<button class="mt-2 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-primary text-white hover:bg-primary/90 transition-colors gap-2 text-sm font-bold shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined" style="font-size: 18px;">confirmation_number</span>
+<span>Book Ticket</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative flex flex-col sm:flex-row items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-surface-dark p-3 border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-md dark:hover:shadow-neon transition-all duration-300">
+<div class="w-full sm:w-32 h-32 sm:h-auto bg-center bg-no-repeat bg-cover rounded-lg shrink-0 relative overflow-hidden" data-alt="Rooftop party crowd with dj lights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBofsCLel3E5sAgPYw8997tdFEcevThoMO8e1u68wg0lvra19_rMsDXzd2DgTGq0cMqN9TOm7ZukiImtwJ-9varJCCwkiAjszIfS8t3UZdBg_Vb1mqPPvv-xA3aHym4gkEJniPdl-9dRK2QTk560lq_vadogyoZiVotnOtcRqEHZUB2ttjK5KU3Cqf-JH0gBkOoAkbe0YP7zbi2SOSLEJZFrXJifh0AZo4b1bVIAGAJr6UOcpp1VGcg08j7Uy8_HdJKIPl9fSi9trI");'>
+<div class="absolute top-2 left-2 bg-primary backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-bold text-white uppercase tracking-wide">
+                        GouminOff
+                    </div>
+</div>
+<div class="flex flex-col justify-between flex-1 gap-2">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<p class="text-gray-900 dark:text-white text-lg font-bold leading-tight line-clamp-1">Afrobeat Rooftop</p>
+<button class="text-gray-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 20px;">bookmark_remove</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined" style="font-size: 16px;">calendar_month</span>
+<p class="text-sm font-semibold leading-normal">Sat, 25 Nov • 22:00</p>
+</div>
+<div class="flex items-center gap-1.5 text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+<p class="text-sm font-normal leading-normal line-clamp-1">SkyBar, Cocody</p>
+</div>
+</div>
+<button class="mt-2 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-surface-dark dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-colors gap-2 text-sm font-bold">
+<span class="material-symbols-outlined" style="font-size: 18px;">info</span>
+<span>Details</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative flex flex-col sm:flex-row items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-surface-dark p-3 border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-md dark:hover:shadow-neon transition-all duration-300">
+<div class="w-full sm:w-32 h-32 sm:h-auto bg-center bg-no-repeat bg-cover rounded-lg shrink-0 relative overflow-hidden" data-alt="Abstract colorful street art festival poster" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBXPolVIrgI954LzRejxTdQOyAP0kSv1tFgpt7_M4Ls7K8OvJo7o4JRC-kJDZd7sz26tYrHqrOcvBPmvQNC-fnlVwP58jEVIhZaThbXQNcBeRW6U9ebQ2QiDrtRUDh1xc8snrMGcDXWsxes3WGHefFoJ21lBNw_BBwp-Tbo5e5dUVMCzcZcOe8rhY9TXSaquM3nvBrHm98iBtzANkYk4IUXjcQA-obr2pOOUlw0R48Jl9-9Sg-ipoLMkeUbNAN0h1owGEUvjaC48VI");'>
+<div class="absolute top-2 left-2 bg-black/60 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-bold text-white uppercase tracking-wide">
+                        Festival
+                    </div>
+</div>
+<div class="flex flex-col justify-between flex-1 gap-2">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<p class="text-gray-900 dark:text-white text-lg font-bold leading-tight line-clamp-1">Urban Culture Fest</p>
+<button class="text-gray-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 20px;">bookmark_remove</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined" style="font-size: 16px;">calendar_month</span>
+<p class="text-sm font-semibold leading-normal">Sun, 03 Dec • 14:00</p>
+</div>
+<div class="flex items-center gap-1.5 text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+<p class="text-sm font-normal leading-normal line-clamp-1">Parc des Sports</p>
+</div>
+</div>
+<button class="mt-2 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-primary text-white hover:bg-primary/90 transition-colors gap-2 text-sm font-bold shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined" style="font-size: 18px;">confirmation_number</span>
+<span>Book Ticket</span>
+</button>
+</div>
+</div>
+<!-- "Load More" Hint -->
+<div class="flex justify-center py-4">
+<button class="text-sm text-gray-500 dark:text-[#ad90cb] font-medium hover:text-primary transition-colors flex items-center gap-1">
+                    See past events
+                    <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Bottom Navigation (Fixed) -->
+<div class="fixed bottom-0 left-0 right-0 z-50 bg-white/90 dark:bg-[#1a1023]/90 backdrop-blur-lg border-t border-gray-200 dark:border-white/5 pb-6 pt-3 px-6 max-w-md mx-auto">
+<div class="flex justify-between items-center">
+<button class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-medium">Discover</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">local_activity</span>
+<span class="text-[10px] font-medium">Events</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-primary transition-colors group relative">
+<!-- Badge for GouminOff -->
+<div class="absolute -top-1.5 -right-1 w-2.5 h-2.5 bg-primary rounded-full animate-pulse"></div>
+<span class="material-symbols-outlined group-hover:animate-bounce">bolt</span>
+<span class="text-[10px] font-medium">GouminOff</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined font-variation-settings-fill">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wézon - User Registration</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8c25f4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#191022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hide for cleaner mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased selection:bg-primary selection:text-white">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-hidden max-w-md mx-auto shadow-2xl">
+<!-- Ambient Background Glows -->
+<div class="absolute top-[-10%] left-[-20%] h-[300px] w-[300px] rounded-full bg-primary/20 blur-[100px] pointer-events-none"></div>
+<div class="absolute bottom-[-10%] right-[-10%] h-[250px] w-[250px] rounded-full bg-blue-600/10 blur-[80px] pointer-events-none"></div>
+<!-- Top App Bar -->
+<div class="relative z-10 flex items-center p-4 justify-between">
+<button class="text-white flex size-12 shrink-0 items-center justify-center rounded-full active:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] text-center pr-12 opacity-0">Wézon</h2> <!-- Hidden for balance -->
+<div class="w-12"></div> <!-- Spacer for balance -->
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 flex flex-col px-6 pb-6 pt-2 z-10 overflow-y-auto no-scrollbar">
+<!-- Hero Section -->
+<div class="mb-8 text-center relative">
+<div class="inline-flex items-center justify-center p-3 mb-4 rounded-full bg-[#261834] border border-[#4d3168]/50 shadow-inner">
+<span class="material-symbols-outlined text-primary text-[32px]">celebration</span>
+</div>
+<h1 class="text-white tracking-tight text-[32px] font-extrabold leading-tight mb-2">
+                    Welcome to <span class="text-primary">Wézon</span>
+</h1>
+<p class="text-gray-400 text-base font-medium leading-normal max-w-[280px] mx-auto">
+                    Unlock the city's best vibes. <br/>No More Goumin.
+                </p>
+</div>
+<!-- Form Fields -->
+<form class="flex flex-col gap-5 w-full">
+<!-- Username Field -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-gray-300 ml-3">Stage Name</label>
+<div class="group flex w-full items-center rounded-full bg-[#261834] border border-[#4d3168] focus-within:border-primary focus-within:ring-1 focus-within:ring-primary focus-within:shadow-[0_0_15px_rgba(140,37,244,0.3)] transition-all duration-300 h-14 overflow-hidden">
+<div class="pl-5 pr-3 text-gray-400 group-focus-within:text-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">person</span>
+</div>
+<input class="flex-1 bg-transparent border-none text-white placeholder:text-gray-500 focus:ring-0 text-base font-medium h-full w-full py-0 pl-0 pr-5" placeholder="e.g. DJ Khaleed" type="text"/>
+</div>
+</div>
+<!-- Email Field -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-gray-300 ml-3">Email</label>
+<div class="group flex w-full items-center rounded-full bg-[#261834] border border-[#4d3168] focus-within:border-primary focus-within:ring-1 focus-within:ring-primary focus-within:shadow-[0_0_15px_rgba(140,37,244,0.3)] transition-all duration-300 h-14 overflow-hidden">
+<div class="pl-5 pr-3 text-gray-400 group-focus-within:text-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">mail</span>
+</div>
+<input class="flex-1 bg-transparent border-none text-white placeholder:text-gray-500 focus:ring-0 text-base font-medium h-full w-full py-0 pl-0 pr-5" placeholder="email@address.com" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-gray-300 ml-3">Secret Code</label>
+<div class="group flex w-full items-center rounded-full bg-[#261834] border border-[#4d3168] focus-within:border-primary focus-within:ring-1 focus-within:ring-primary focus-within:shadow-[0_0_15px_rgba(140,37,244,0.3)] transition-all duration-300 h-14 overflow-hidden">
+<div class="pl-5 pr-3 text-gray-400 group-focus-within:text-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">lock</span>
+</div>
+<input class="flex-1 bg-transparent border-none text-white placeholder:text-gray-500 focus:ring-0 text-base font-medium h-full w-full py-0 pl-0 pr-2" placeholder="••••••••" type="password"/>
+<button class="pr-5 pl-2 text-gray-500 hover:text-white transition-colors flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility_off</span>
+</button>
+</div>
+</div>
+<!-- Primary Action -->
+<button class="mt-4 w-full h-14 rounded-full bg-primary text-white font-bold text-lg tracking-wide shadow-[0_4px_20px_rgba(140,37,244,0.4)] hover:shadow-[0_6px_25px_rgba(140,37,244,0.6)] hover:translate-y-[-1px] active:translate-y-[1px] active:shadow-none transition-all duration-200 flex items-center justify-center gap-2" type="button">
+                    GET ACCESS
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<!-- Terms -->
+<p class="text-xs text-center text-gray-500 mt-1">
+                    By signing up, you agree to our <a class="text-primary hover:underline underline-offset-2" href="#">Terms &amp; Vibes Policy</a>.
+                </p>
+</form>
+<!-- Divider -->
+<div class="flex items-center gap-4 py-8">
+<div class="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#4d3168]"></div>
+<span class="text-sm font-medium text-gray-400">Or vibe with</span>
+<div class="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#4d3168]"></div>
+</div>
+<!-- Social Login -->
+<div class="flex justify-center gap-6">
+<!-- Google -->
+<button class="flex h-14 w-14 items-center justify-center rounded-full bg-[#261834] border border-[#4d3168] hover:bg-[#342247] hover:border-primary transition-all duration-300 shadow-lg">
+<div class="relative w-6 h-6">
+<!-- Abstract Google colors representation using CSS shapes to avoid external images -->
+<div class="absolute inset-0 bg-white mask-google" style="mask-image: url('data:image/svg+xml;utf8,&lt;svg viewBox=\'0 0 24 24\' xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;path d=\'M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z\'/&gt;&lt;/svg&gt;'); -webkit-mask-image: url('data:image/svg+xml;utf8,&lt;svg viewBox=\'0 0 24 24\' xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;path d=\'M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z\'/&gt;&lt;/svg&gt;'); bg-white;"></div>
+<!-- Fallback simple icon if mask fails -->
+<span class="material-symbols-outlined text-white/90">public</span>
+</div>
+</button>
+<!-- Apple -->
+<button class="flex h-14 w-14 items-center justify-center rounded-full bg-[#261834] border border-[#4d3168] hover:bg-[#342247] hover:border-primary transition-all duration-300 shadow-lg text-white">
+<span class="text-xl font-bold"></span>
+<!-- Using text character for Apple as it is universally available on iOS context -->
+</button>
+<!-- Facebook -->
+<button class="flex h-14 w-14 items-center justify-center rounded-full bg-[#261834] border border-[#4d3168] hover:bg-[#342247] hover:border-primary transition-all duration-300 shadow-lg text-white">
+<span class="font-bold text-xl">f</span>
+</button>
+</div>
+<div class="mt-auto pt-8 pb-4 text-center">
+<p class="text-gray-400">
+                    Already in the crew? <a class="text-primary font-bold hover:text-white transition-colors" href="#">Log In</a>
+</p>
+</div>
+</div>
+</div>
+</body></html>
